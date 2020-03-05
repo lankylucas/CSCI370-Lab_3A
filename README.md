@@ -101,14 +101,14 @@ This lab will build upon your basic Adapter knowledge. You will create a custom 
 ```
 * Modifying the thumbnail to be an ImageView will be the **Challenge**. Get the version with TextView workking first. You can use [icons8.com](https://icons8.com/) for icons. I think 96 by 96 is a good size to get.
 * Create a Java reference to the ListView in **MainActivity.java**.
-* Create a **Student** class in Java (a POJO- Plain Ole Java Object) with three Strings as private member variables (firstName, lastName, and major). Remember, POJO are only constructors, getters, and setters.
+* Create a **com.example.advancedadapter.Student** class in Java (a POJO- Plain Ole Java Object) with three Strings as private member variables (firstName, lastName, and major). Remember, POJO are only constructors, getters, and setters.
 * In MainActivity.java, create 5 Students and put them into an ArrayList. Make sure to give the Students a firstName, lastName, and major.
 * Create a StudentAdapter class that extends BaseAdapter and takes in a Context Object and an ArrayList in the constructor.
 * In StudentAdapter.java, create the following private member variables:
 ```
     private Context mContext;
     private LayoutInflater mInflator;
-    private ArrayList<Student> mDataSource;
+    private ArrayList<com.example.advancedadapter.Student> mDataSource;
 ```
 * In the constructor, set mContext and mDataSource to the arguments that are passed in.
 * In the constructor, set mInflator as follows:
@@ -121,7 +121,7 @@ mInflator = (LayoutInflater) mContext.getSystemService((Context.LAYOUT_INFLATER_
 ```
  View rowView = mInflator.inflate(R.layout.list_view_row, parent, false);
 ```
-* Under that line, code the mapping, the basic steps are create a reference to the View items in layout file, create a Student reference by calling getItem(), set necessary fields in View items with data from Student.
+* Under that line, code the mapping, the basic steps are create a reference to the View items in layout file, create a com.example.advancedadapter.Student reference by calling getItem(), set necessary fields in View items with data from com.example.advancedadapter.Student.
 * In MainActivity.java, have your ListView object set an adapter with the StudentAdapter you created in the last step.
 * Run your application and test.
 
